@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Code95\MediaLibrary\MediaLibrary;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Cards\Help;
 use Illuminate\Support\Facades\Gate;
@@ -77,7 +78,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     public function tools()
     {
-        return [];
+        return [
+            new MediaLibrary
+        ];
     }
 
     /**

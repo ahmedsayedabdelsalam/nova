@@ -11,6 +11,14 @@
         {
             "type": "path",
             "url": "./nova"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/MediaLibrary"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/MediaLibrary"
         }
     ],
     "require": {
@@ -18,7 +26,8 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.2",
         "laravel/tinker": "^1.0",
-        "laravel/nova": "*"
+        "laravel/nova": "*",
+        "code95/media-library": "*"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
