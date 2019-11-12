@@ -25,7 +25,7 @@ export default {
   data: function() {
     return {
       dropzoneOptions: {
-        url: "/media-library/upload-media",
+        url: "/nova-vendor/media-library/upload-media",
         thumbnailWidth: 200,
         addRemoveLinks: true,
         headers: {

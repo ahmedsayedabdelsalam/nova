@@ -1,6 +1,6 @@
 <template>
   <div class="file" v-if="image">
-    <div class="card" style="width: 18rem;">
+    <div class="card">
       <img class="card-img-top" v-if="imageType" :src="image.url" :alt="image.data.name" />
       <video width="100%" v-if="videoType" controls>
         <source :src="image.url" type="video/mp4" />

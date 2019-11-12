@@ -70,7 +70,7 @@ class MediaLibraryController extends Controller
             ->filterDate($request->date)
             ->filterStatus($request->status)
             ->filterUploadedBy($request->uploaded_by)
-            ->with('users', 'posts')
+            // ->with('users', 'posts')
             ->paginate(40);
 
 

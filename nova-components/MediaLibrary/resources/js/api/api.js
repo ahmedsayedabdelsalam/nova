@@ -14,5 +14,8 @@ export default {
             }
         )
         
+    },
+    'users' : {
+      'all' : () => axios.get('/nova-vendor/media-library/users')
     }
 }

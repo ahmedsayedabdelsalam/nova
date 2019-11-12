@@ -1,5 +1,7 @@
 <?php
 
+use App\User;
+use Code95\MediaLibrary\Http\Resources\UserResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,4 +25,8 @@ Route::group(['namespace' => 'Code95\MediaLibrary\Http\Controllers'], function (
     Route::delete('delete-media/{media}', 'MediaLibraryController@delete');
     Route::put('update-media/{media}', 'MediaLibraryController@update');
     Route::get('images', 'MediaLibraryController@mediaData');
+});
+
+Route::get('users', function (Request $request) {
+    return UserResource::collection(User::all());
 });

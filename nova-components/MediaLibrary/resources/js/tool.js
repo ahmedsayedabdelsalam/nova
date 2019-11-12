@@ -1,6 +1,7 @@
 import mediaLibrary from './store'
 
 Nova.booting((Vue, router, store) => {
+  Vue.config.devtools = true
   router.addRoutes([
     {
       name: 'media-library',

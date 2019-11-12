@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-2 mb-2">
+  <div class="mt-2 mb-2">
     <form action>
       <div class="form-row">
         <div class="form-group col-md-2">
@@ -29,7 +29,7 @@
           </select>
         </div>
         <div class="form-group col-md-2">
-          <b-button variant="warning" class="btnClear" @click="removeParams()">Clear</b-button>
+          <b-button variant="warning" class="btn btnClear btn-warning" @click="removeParams()">Clear</b-button>
         </div>
       </div>
     </form>
@@ -40,9 +40,10 @@
 import _ from "lodash";
 import axios from "axios";
 import { mapMutations } from "vuex";
+import api from '../api/api.js'
 export default {
   async mounted() {
-    const response = await axios.get("/users");
+    const response = await api.users.all();
     this.users = response.data.data;
   },
   data() {
